@@ -28,17 +28,17 @@ function setup() {
 }
 
 function draw() {
+    strokeWeight("13");
+    stroke(0);
+    if (mouseIsPressed) {
+        line(pmouseX, pmouseY, mouseX, mouseY);
+    }
     console.log("Inside Draw")
     checkSketch();
     if (drawn_sketch == sketch) {
         answer_holder = "set";
         score = score + 1;
         document.getElementById("score").innerHTML = "Score: " + score;
-    }
-    strokeWeight("13");
-    stroke(0);
-    if (mouseIsPressed) {
-        line(pmouseX, pmouseY, mouseX, mouseY);
     }
 }
 
